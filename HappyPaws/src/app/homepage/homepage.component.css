@@ -1,0 +1,61 @@
+* {
+  font-family: "Simonetta";
+}
+.pro {
+  margin-top: 10px;
+
+  background-color: rgb(227, 226, 226);
+  padding-left: 4em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  padding-right: 2em;
+  line-height: 1.5em;
+  border: none;
+}
+.inner {
+  margin-top: 5px;
+  border-radius: 10px;
+}
+h1 {
+  font-family: "Simonetta";
+}
+.inner img {
+  border-radius: 10px;
+}
+.product-details h2 a {
+  font-size: 30px;
+  font-family: "Simonetta";
+  font-weight: 350;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sample {
+  padding-top: 5em;
+}
+.sample h6 {
+  font-family: "Simonetta";
+  text-transform: uppercase;
+  font-weight: 350;
+  display: block;
+}
+.sample .row {
+  padding-left: 10em;
+}
+.sample .card {
+  border: none;
+}
+.about img {
+  border-radius: 10px;
+}
+h5 {
+  font-family: "Simonetta";
+}
+.s img {
+  border-radius: 10px;
+  max-height: 320px;
+}

@@ -1,0 +1,169 @@
+* {
+  font-family: Simonetta;
+}
+
+.checked {
+  color: orange;
+}
+
+.tab-content {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  max-width: 450px;
+  background: #fff;
+  border-radius: 20px;
+}
+.tab-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card-inner {
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-bottom: 1em;
+  padding-right: 3em;
+}
+a {
+  padding: 0 1vh;
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.pro {
+  padding-top: 10px;
+  padding-left: 5em;
+  padding-bottom: 5em;
+  padding-right: 1em;
+  line-height: 1.5em;
+  border: none;
+}
+.card-btn {
+  padding-top: 1em;
+}
+
+.product-title,
+.price {
+  text-transform: UPPERCASE;
+  font-weight: bold;
+}
+
+.product-title,
+.product-description,
+.price {
+  margin-bottom: 15px;
+}
+
+.product-title {
+  margin-top: 0;
+}
+.quantity {
+  max-width: 5px;
+}
+
+.add-to-cart,
+.like {
+  background: #ff9f1a;
+
+  border: none;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #fff;
+}
+.add-to-cart:hover,
+.like:hover {
+  background: #b36800;
+  color: #fff;
+}
+
+.tooltip-inner {
+  padding: 1.3em;
+}
+.sm-text {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.sm-text-1 {
+  font-size: 14px;
+}
+
+.green-tab {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 3px 5px 3px;
+}
+.btn {
+  border-radius: 20px;
+}
+.btn-red {
+  background-color: #e64a19;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.btn-red:hover {
+  background-color: #bf360c;
+}
+
+.btn-red:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+
+.round-icon {
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.green-dot {
+  color: #4caf50;
+}
+
+p,
+span {
+  font-family: "Simonetta";
+  align-items: center;
+}
+
+.grey-text {
+  color: #bdbdbd;
+}
+
+.green-text {
+  color: #4caf50;
+}
+
+.btn {
+  background-color: #000;
+  border-color: #000;
+  color: white;
+  width: 25%;
+  font-size: 0.9rem;
+  padding: 5px;
+  border-radius: 0;
+}
+
+.profile-pic img {
+  border-radius: 50%;
+}
+
+.rating-dot {
+  letter-spacing: 5px;
+}
+
+.via {
+  border-radius: 20px;
+  height: 28px;
+}
+.liked {
+  color: #eb1599;
+}
