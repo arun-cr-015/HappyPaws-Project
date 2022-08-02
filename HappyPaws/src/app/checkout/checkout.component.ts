@@ -9,7 +9,7 @@ import { OrderService } from '../service/order.service';
 import { ProductService } from '../service/product.service';
 import { UserauthService } from '../service/userauth.service';
 import { WindowRefService } from '../service/window-ref.service';
-
+declare let alertify: any;
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -90,10 +90,11 @@ export class CheckoutComponent implements OnInit {
             //alertify.success('Order Placed');
             this.router.navigate(['myorders']);
             this.userAuth.reloadData();
+            alertify.success('Order Placed');
           },
           (error) => {
             console.log(error);
-            //alertify.error('Order not Placed')
+            alertify.error('Order not Placed');
           }
         );
       }

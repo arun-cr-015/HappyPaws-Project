@@ -63,7 +63,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
 	private boolean hasAuthorizationHeader(HttpServletRequest request) {
 		String header = request.getHeader("Authorization");
-		loggerLocal.info("Authorization : {}", header);
+		// loggerLocal.info("Authorization : {}", header);
 
 		return !(ObjectUtils.isEmpty(header) || !header.startsWith("Bearer"));
 	}

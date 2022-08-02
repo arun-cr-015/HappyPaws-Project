@@ -34,7 +34,7 @@ public class PaymentService {
 			orderId = orderlocal.get("id");
 			PaymentDto pay = new PaymentDto();
 			pay.setPaymentId(orderId);
-			logger.info("Payment Done RazorPay Order Id: {}", orderId);
+			logger.info("RazorPay Order Id: {}", orderId);
 			return pay;
 
 		} catch (RazorpayException e) {

@@ -44,7 +44,11 @@ export class ReviewComponent implements OnInit {
         }
         this.length = this.review.length;
         this.overallRating = sum / this.length;
+
         console.log(this.overallRating);
+        if (isNaN(this.overallRating)) {
+          this.overallRating = 0;
+        }
       },
       (error) => {
         console.log(error);

@@ -35,12 +35,11 @@ export class ProductdetailComponent implements OnInit {
   getProduct() {
     this.wishlistService.getwishlist().subscribe((data) => {
       this.wishproducts = data.items;
-      console.log(this.wishproducts);
     });
     this.productService.getProductById(this.productid).subscribe(
       (data) => {
         this.product = data;
-        console.log(this.product);
+        //console.log(this.product);
         for (let i = 0; i < this.wishproducts.length; i++) {
           if (
             this.product.productid === this.wishproducts[i].product.productid
@@ -90,7 +89,6 @@ export class ProductdetailComponent implements OnInit {
   show(productid: number) {
     console.log(productid);
     this.wishlistService.removeWishListItem(productid).subscribe((data) => {
-      console.log(data);
       this.ngOnInit();
     });
   }

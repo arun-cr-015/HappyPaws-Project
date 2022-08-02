@@ -36,7 +36,9 @@
               </div>
               <div class="col">{{ item.quantity }}</div>
               <div class="col">{{ item.product.price }}</div>
-              <div class="col">${{ item.quantity * item.product.price }}</div>
+              <div class="col">
+                &#x20B9;{{ item.quantity * item.product.price }}
+              </div>
             </div>
           </div>
           <div
@@ -67,7 +69,7 @@
             >
               <div class="col">TOTAL PRICE</div>
               <div class="col text-right" style="margin-right: 70px">
-                $ {{ grandTotal }}
+                &#x20B9; {{ grandTotal }}
               </div>
             </div>
           </div>
