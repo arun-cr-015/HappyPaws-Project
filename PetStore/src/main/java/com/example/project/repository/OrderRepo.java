@@ -9,7 +9,7 @@ import com.example.project.model.Order;
 import com.example.project.model.UserModel;
 
 @Repository
-public interface OrderRepo extends JpaRepository<Order, Long> {
+public interface OrderRepo  extends JpaRepository<Order, Long> {
     List<Order> findAllByUserOrderByCreatedDateDesc(UserModel user);
 
 }

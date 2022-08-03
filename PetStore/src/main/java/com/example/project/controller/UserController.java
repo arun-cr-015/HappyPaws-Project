@@ -33,7 +33,7 @@ public class UserController {
 
 	@PostMapping("/edituser/{id}")
 	public ResponseEntity<Object> editUser(@RequestBody UserModel user, @PathVariable(value = "id") Long id) {
-		UserModel userLocal = user;
+		UserModel userLocal=user;
 		return userService.editUser(userLocal, id);
 	}
 

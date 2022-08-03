@@ -47,7 +47,7 @@ public class CartController {
 
 	@GetMapping("/listcart/{id}")
 	public ResponseEntity<Cart> list(@PathVariable(value = "id") Long id) {
-		return new ResponseEntity<>(cartService.getCartByUser(id), HttpStatus.OK);
+			return new ResponseEntity<>(cartService.getCartByUser(id), HttpStatus.OK);
 	}
 
 	@PostMapping("/editcart/{id}")
@@ -56,7 +56,7 @@ public class CartController {
 		if (cart != null) {
 			return new ResponseEntity<>(cart, HttpStatus.OK);
 		} else {
-			throw new CartItemNotExistException("Cart item does not exist");
+			throw  new CartItemNotExistException("Cart item does not exist");
 		}
 	}
 

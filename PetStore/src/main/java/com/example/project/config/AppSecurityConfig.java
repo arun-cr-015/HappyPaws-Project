@@ -49,8 +49,9 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.cors();
 		http.csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.exceptionHandling().authenticationEntryPoint(
-				(request, response, ex) -> response.sendError(HttpServletResponse.SC_UNAUTHORIZED, ex.getMessage()));
+		http.exceptionHandling().authenticationEntryPoint((request, response, ex) -> 
+			response.sendError(HttpServletResponse.SC_UNAUTHORIZED, ex.getMessage())
+		);
 		http.authorizeHttpRequests().antMatchers("/login", "/signup").permitAll().anyRequest().authenticated();
 		http.addFilterBefore(jwtTokenFilter, UsernamePasswordAuthenticationFilter.class);
 

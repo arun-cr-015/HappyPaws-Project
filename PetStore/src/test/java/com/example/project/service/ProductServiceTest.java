@@ -11,16 +11,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.example.project.dto.ProductDto;
 import com.example.project.model.Product;
 import com.example.project.model.ProductCategory;
-import com.example.project.service.ProductCategoryService;
-import com.example.project.service.ProductService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class ProductServiceTest {
 	@Autowired
 	private ProductService productService;
-	@Autowired
-	private ProductCategoryService categoryService;
 
 	@Test
 	void addProductTest() {

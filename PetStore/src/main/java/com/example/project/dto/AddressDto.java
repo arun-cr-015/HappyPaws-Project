@@ -7,6 +7,19 @@ public class AddressDto {
 	private String state;
 	private String pincode;
 
+	public AddressDto() {
+		super();
+	}
+
+	public AddressDto(String houseno, String street, String city, String state, String pincode) {
+		super();
+		this.houseno = houseno;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.pincode = pincode;
+	}
+
 	public String getHouseno() {
 		return houseno;
 	}

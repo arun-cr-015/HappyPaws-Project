@@ -10,7 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.project.controller.LoginController;
 import com.example.project.dto.AuthResponse;
 import com.example.project.dto.LoginDto;
 import com.example.project.dto.UserDto;

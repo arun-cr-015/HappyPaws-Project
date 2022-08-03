@@ -19,7 +19,7 @@ import io.jsonwebtoken.UnsupportedJwtException;
 @Component
 public class JwtUtil {
 	Logger logger = LogManager.getLogger(JwtUtil.class);
-	private static final long EXPIRE_DURATION = (long) 60 * 60 * 1000;
+	private static final long EXPIRE_DURATION = (long)60 * 60 * 1000;
 	@Value("${app.jwt.secret}")
 	private String secretKey;
 
@@ -34,13 +34,13 @@ public class JwtUtil {
 			Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);
 			return true;
 		} catch (ExpiredJwtException ex) {
-			logger.info("JWT Expired {}", ex.getMessage());
+			logger.info("JWT Expired {}" , ex.getMessage());
 		} catch (IllegalArgumentException ex) {
-			logger.info("Token Null {}", ex.getMessage());
+			logger.info("Token Null {}" , ex.getMessage());
 		} catch (UnsupportedJwtException ex) {
-			logger.info("Not Supporetd {}", ex.getMessage());
+			logger.info("Not Supporetd {}" , ex.getMessage());
 		} catch (SignatureException ex) {
-			logger.info("Signature fail {}", ex.getMessage());
+			logger.info("Signature fail {}" , ex.getMessage());
 		}
 		return false;
 	}

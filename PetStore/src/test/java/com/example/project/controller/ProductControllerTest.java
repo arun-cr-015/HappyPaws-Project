@@ -14,7 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.project.controller.ProductController;
 import com.example.project.dto.ProductDto;
 import com.example.project.model.Product;
 import com.example.project.model.ProductCategory;

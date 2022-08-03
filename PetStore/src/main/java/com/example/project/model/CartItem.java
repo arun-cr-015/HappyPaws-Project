@@ -28,6 +28,14 @@ public class CartItem {
 		super();
 	}
 
+	public CartItem(long cartItemid, Product product, Date createdDate, int quantity) {
+		super();
+		this.cartItemid = cartItemid;
+		this.product = product;
+		this.createdDate = createdDate;
+		this.quantity = quantity;
+	}
+
 	public long getCartItemid() {
 		return cartItemid;
 	}

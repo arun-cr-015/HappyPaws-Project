@@ -62,8 +62,8 @@ public class OrderService {
 		}
 
 		cartService.deleteCart(user.getId());
-		logger.info("Order Placed id: {} By {}", newOrder.getId(), newOrder.getUser().getEmail());
-
+		logger.info("Order Placed id: {} By {}" , newOrder.getId(),newOrder.getUser().getEmail());
+		
 		return newOrder;
 	}
 
@@ -89,7 +89,7 @@ public class OrderService {
 		if (!order.isPresent()) {
 			throw new OrderNotExistException("Order id is invalid " + id);
 		}
-		logger.info("Order Cancelled id :{} By {}", id, order.get().getUser().getEmail());
+		logger.info("Order Cancelled id :{} By {}" , id,order.get().getUser().getEmail());
 		orderRepo.delete(order.get());
 
 	}

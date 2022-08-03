@@ -10,7 +10,7 @@ class PetStoreApplicationTests {
 
 	@Test
 	void contextLoads() {
-		int value = 2;
+		int value=2;
 		assertEquals(2, value);
 	}
 

@@ -13,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.project.controller.UserController;
 import com.example.project.model.UserModel;
 import com.example.project.service.UserService;
 

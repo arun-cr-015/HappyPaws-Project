@@ -9,8 +9,7 @@ public class UserDto {
 	private boolean active;
 	private String role;
 
-	public UserDto(Long id, String email, String name, String phoneNumber, boolean active, String role,
-			String password) {
+	public UserDto(Long id, String email, String name, String phoneNumber, boolean active, String role,String password) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -18,7 +17,7 @@ public class UserDto {
 		this.phoneNumber = phoneNumber;
 		this.active = active;
 		this.role = role;
-		this.password = password;
+		this.password=password;
 	}
 
 	public Long getId() {

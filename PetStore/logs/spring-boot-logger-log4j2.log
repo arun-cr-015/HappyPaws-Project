@@ -1,0 +1,31 @@
+2022-08-03 13:14:42,850 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Arun/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Arun/.m2/repository/org/json/json/20180130/json-20180130.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2022-08-03 13:14:42,876 INFO o.s.b.StartupInfoLogger [main] Starting CartServiceTest using Java 16.0.2 on LAPTOP-RL3HPGG1 with PID 17348 (started by Arun in C:\Users\Arun\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\PetStore)
+2022-08-03 13:14:42,880 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-08-03 13:14:42,882 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "test"
+2022-08-03 13:14:43,713 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-03 13:14:43,825 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 102 ms. Found 10 JPA repository interfaces.
+2022-08-03 13:14:44,529 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-03 13:14:44,592 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-08-03 13:14:44,818 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-03 13:14:45,004 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2022-08-03 13:14:45,429 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-08-03 13:14:45,445 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-08-03 13:14:46,594 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-03 13:14:46,609 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:14:46,713 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-03 13:14:48,114 INFO o.s.s.w.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3df7e309, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55f4ec04, org.springframework.security.web.context.SecurityContextPersistenceFilter@40ed4674, org.springframework.security.web.header.HeaderWriterFilter@2eb91767, org.springframework.web.filter.CorsFilter@f3c27e9, org.springframework.security.web.authentication.logout.LogoutFilter@3d2b8e, com.example.project.config.JwtTokenFilter@3dabdd11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25c98637, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43735ea0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fd4850b, org.springframework.security.web.session.SessionManagementFilter@73a88711, org.springframework.security.web.access.ExceptionTranslationFilter@5318731f, org.springframework.security.web.access.intercept.AuthorizationFilter@25814d3c]
+2022-08-03 13:14:48,641 INFO o.s.b.StartupInfoLogger [main] Started CartServiceTest in 6.206 seconds (JVM running for 7.766)
+2022-08-03 13:14:49,284 WARN o.h.e.j.s.SqlExceptionHelper [main] SQL Error: 1451, SQLState: 23000
+2022-08-03 13:14:49,285 ERROR o.h.e.j.s.SqlExceptionHelper [main] Cannot delete or update a parent row: a foreign key constraint fails (`testemp`.`cart_items`, CONSTRAINT `FKkx6gdr21dlcdfox8mh6jxhru1` FOREIGN KEY (`items_cart_itemid`) REFERENCES `cart_item` (`cart_itemid`))
+2022-08-03 13:14:49,290 INFO o.h.e.j.b.i.AbstractBatchImpl [main] HHH000010: On release of batch it still contained JDBC statements
+2022-08-03 13:14:49,429 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-03 13:14:49,433 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2022-08-03 13:14:49,442 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

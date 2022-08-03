@@ -46,17 +46,14 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<Object> exception(ReviewNotExistException exception) {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_GATEWAY);
 	}
-
 	@ExceptionHandler(value = CartItemNotExistException.class)
 	public ResponseEntity<Object> exception(CartItemNotExistException exception) {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_GATEWAY);
 	}
-
 	@ExceptionHandler(value = WishListItemNotExistException.class)
 	public ResponseEntity<Object> exception(WishListItemNotExistException exception) {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_GATEWAY);
 	}
-
 	@ExceptionHandler(value = WishListNotExistException.class)
 	public ResponseEntity<Object> exception(WishListNotExistException exception) {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_GATEWAY);

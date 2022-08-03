@@ -104,37 +104,37 @@ public class UserModel implements UserDetails, Serializable {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-
+		
 		return Collections.emptyList();
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-
+	
 		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-
+	
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-
+	
 		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
-
+		
 		return true;
 	}
 
 	@Override
 	public String getUsername() {
-
+		
 		return this.email;
 	}
 

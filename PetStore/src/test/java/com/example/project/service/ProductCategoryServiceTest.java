@@ -9,7 +9,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.example.project.model.ProductCategory;
-import com.example.project.service.ProductCategoryService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

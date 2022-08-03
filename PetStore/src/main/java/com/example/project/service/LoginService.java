@@ -38,7 +38,7 @@ public class LoginService {
 
 		Optional<UserModel> userExist = userRepo.findByEmail(user.getEmail());
 		if (userExist.isEmpty()) {
-			if (user.getRole() == null) {
+			if ( user.getRole() == null) {
 				user.setRole(ROLE);
 			}
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
@@ -57,10 +57,10 @@ public class LoginService {
 					.authenticate(new UsernamePasswordAuthenticationToken(login.getEmail(), login.getPassword()));
 			UserModel userModel = (UserModel) authentication.getPrincipal();
 			UserDto userDto = new UserDto(userModel.getId(), userModel.getEmail(), userModel.getName(),
-					userModel.getPhoneNumber(), userModel.isActive(), userModel.getRole(), userModel.getPassword());
+					userModel.getPhoneNumber(), userModel.isActive(), userModel.getRole(),userModel.getPassword());
 			String accessToken = jwtUtil.generateAccessToken(userModel);
 			AuthResponse response = new AuthResponse(userDto, accessToken);
-			logger.info("Email LoggedIn {}", login.getEmail());
+			logger.info("Email LoggedIn {}" , login.getEmail());
 			return ResponseEntity.ok(response);
 		} catch (BadCredentialsException ex) {
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();

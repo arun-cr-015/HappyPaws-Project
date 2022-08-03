@@ -33,6 +33,7 @@ public class OrderController {
 			throws UserNotExistException {
 		UserModel user = userService.getOneUser(id);
 		return new ResponseEntity<>(orderService.placeOrder(user, address), HttpStatus.OK);
+		
 
 	}
 
@@ -45,7 +46,7 @@ public class OrderController {
 
 	@GetMapping("/oneorder/{id}")
 	public ResponseEntity<Order> oneOrder(@PathVariable(value = "id") long id) {
-		return new ResponseEntity<>(orderService.getOneOrder(id), HttpStatus.OK);
+			return new ResponseEntity<>(orderService.getOneOrder(id), HttpStatus.OK);
 	}
 
 	@GetMapping("/allorders")

@@ -11,7 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.example.project.dto.AuthResponse;
 import com.example.project.dto.LoginDto;
 import com.example.project.model.UserModel;
-import com.example.project.service.LoginService;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

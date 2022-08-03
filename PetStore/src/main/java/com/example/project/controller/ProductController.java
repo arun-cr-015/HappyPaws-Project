@@ -36,33 +36,32 @@ public class ProductController {
 	private UserService userService;
 	@Autowired
 	private WishListService wishService;
-
+	
 	public ProductController(ProductService productService, ProductCategoryService categoryService) {
 		super();
 		this.productserv = productService;
 		this.categoryService = categoryService;
 	}
-
 	@GetMapping("/allprod/{cid}/{id}")
-	public ResponseEntity<List<Product>> productcatWish(@PathVariable(value = "cid") long cid,
-			@PathVariable(value = "id") long id) {
-		Optional<ProductCategory> category = categoryService.checkCategory(cid);
-		UserModel user = userService.getOneUser(id);
-		if (!category.isPresent()) {
+	public ResponseEntity<List<Product>> productcatWish(@PathVariable (value="cid") long cid,@PathVariable (value = "id") long id){
+		Optional<ProductCategory> category=categoryService.checkCategory(cid);
+		UserModel user=userService.getOneUser(id);
+		if(!category.isPresent()) {
 			throw new CategoryNotExistException("Category is invalid ");
 		}
-		WishList wishList = wishService.getWishListUser(user);
-		if (wishList == null) {
-			return productserv.getAllProductsforCategory(category.get());
-		} else {
+		WishList wishList=wishService.getWishListUser(user);
+		if(wishList==null) {
+			return productserv.getAllProductsforCategory(category.get());}
+		else {
 			return productserv.getAllProductsforCategory(category.get(), user);
 		}
 	}
-
 	@GetMapping("/allproducts")
 	public ResponseEntity<List<Product>> allProducts() {
 		return productserv.getAllProducts();
 	}
+
+	
 
 	@PostMapping("/addproduct")
 	public ResponseEntity<Object> addProduct(@RequestBody ProductDto product) {
@@ -84,10 +83,11 @@ public class ProductController {
 		Product productExist = productserv.getOneProduct(pid);
 		if (category.get() != null && productExist != null) {
 			return productserv.editProduct(productEdit, category.get(), productExist);
-		} else {
+		}
+		else {
 			throw new ProductNotExistException("Product Does not exist");
 		}
-
+		
 	}
 
 	@GetMapping("/getproduct/{pid}")
@@ -104,5 +104,7 @@ public class ProductController {
 	public List<Product> searchProduct(@PathVariable(value = "product_name") String name) {
 		return productserv.searchProduct(name);
 	}
+
+	
 
 }

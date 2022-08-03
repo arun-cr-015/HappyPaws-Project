@@ -95,21 +95,22 @@ public class ProductService {
 
 	}
 
+	
+
 	public ResponseEntity<List<Product>> getAllProductsforCategory(ProductCategory category, UserModel user) {
 
 		List<Product> products = productRepo.findAllByProductCategoryOrderByProductName(category);
 		Optional<WishList> wish = wishRepo.findByUser(user);
-		if (wish.isPresent()) {
-			List<WishListItem> wishItems = wish.get().getItems();
-			for (Product product : products) {
-				for (WishListItem wishItem : wishItems) {
-					if (wishItem.getProduct().equals(product)) {
-						product.setWishlist(true);
-					}
+		if(wish.isPresent()) {
+		List<WishListItem> wishItems = wish.get().getItems();
+		for (Product product : products) {
+			for (WishListItem wishItem : wishItems) {
+				if (wishItem.getProduct().equals(product)) {
+					product.setWishlist(true);
 				}
-
 			}
-		}
+
+		}}
 		return new ResponseEntity<>(products, HttpStatus.OK);
 	}
 

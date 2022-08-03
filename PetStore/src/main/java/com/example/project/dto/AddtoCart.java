@@ -5,6 +5,17 @@ public class AddtoCart {
 	private long productId;
 	private int quantity;
 
+	public AddtoCart() {
+		super();
+	}
+
+	public AddtoCart(long id, long productId, int quantity) {
+		super();
+		this.id = id;
+		this.productId = productId;
+		this.quantity = quantity;
+	}
+
 	@Override
 	public String toString() {
 		return "AddtoCart [id=" + id + ", productId=" + productId + ", quantity=" + quantity + "]";

@@ -19,7 +19,7 @@ public class LoginController {
 
 	@PostMapping("/signup")
 	public ResponseEntity<Object> signupUser(@RequestBody UserModel user) {
-
+		
 		return loginService.signupUser(user);
 	}
 
