@@ -7,8 +7,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -25,7 +23,6 @@ import com.example.project.util.JwtUtil;
 public class JwtTokenFilter extends OncePerRequestFilter {
 	@Autowired
 	private JwtUtil jwtUtil;
-	Logger loggerLocal = LogManager.getLogger(JwtTokenFilter.class);
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
@@ -63,8 +60,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
 	private boolean hasAuthorizationHeader(HttpServletRequest request) {
 		String header = request.getHeader("Authorization");
-		loggerLocal.info("Authorization : {}" , header);
-		
+
 		return !(ObjectUtils.isEmpty(header) || !header.startsWith("Bearer"));
 	}
 

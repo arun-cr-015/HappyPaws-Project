@@ -3,6 +3,7 @@ package com.example.project.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,16 +25,14 @@ public class Product implements Serializable {
 	private int price;
 	private int quantity;
 	private boolean wishlist;
-	@ManyToOne()
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "category", referencedColumnName = "categoryId")
-	@JsonIgnoreProperties(value = { "applications", "hibernateLazyInitializer" })
+	// @JsonIgnoreProperties(value = { "applications", "hibernateLazyInitializer" })
 	private ProductCategory productCategory;
 
 	public Product() {
 		super();
 	}
-
-	
 
 	public long getProductid() {
 		return productid;

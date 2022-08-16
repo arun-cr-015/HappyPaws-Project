@@ -1,17 +1,16 @@
-<div class="row" style="max-height: 729px">
-  <div class="col-6" style="max-width: 700px">
+<div class="container-fluid login p-0">
+  <div class="login-side">
     <img
       src="https://images.pexels.com/photos/5942760/pexels-photo-5942760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-      height="729"
-      width="700"
+      height="745"
+      width="725"
     />
   </div>
-  <div class="col-6">
-    <div
-      class="container"
-      style="padding: 50px 200px; border-radius: 5px; max-height: 750px"
-    >
+  <div class="login-side" style="padding-top: 30px">
+    <div class="login-child">
       <h2>Sign Up</h2>
+    </div>
+    <div class="login-child">
       <form #signupForm="ngForm" (ngSubmit)="signup()">
         <div class="form-group">
           <label for="name" class="label">Name:</label>
@@ -134,20 +133,21 @@
           </div>
         </div>
         <tr></tr>
-
-        <button
-          [disabled]="signupForm.form.invalid"
-          type="submit"
-          class="btn btn-primary"
-          style="margin-top: 10px; width: 200px; border-radius: 15px"
-        >
-          Submit
-        </button>
+        <div class="login-child">
+          <button
+            [disabled]="signupForm.form.invalid"
+            type="submit"
+            class="btn btn-primary"
+            style="margin-top: 10px; width: 200px; border-radius: 15px"
+          >
+            Submit
+          </button>
+        </div>
       </form>
-      <br />
-      <small
-        class="float-end"
-        style="font-size: large; font-family: Simonetta; padding-top: 15px"
+    </div>
+    <br />
+    <div class="login-child">
+      <small class="float-end"
         >Already Registerd?<a
           style="color: blue; text-decoration: none; font-size: large"
           [routerLink]="['']"

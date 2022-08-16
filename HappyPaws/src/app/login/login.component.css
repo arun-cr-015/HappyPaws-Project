@@ -7,10 +7,7 @@ h2 {
   font-size: 72px;
   color: #000000;
 }
-.con {
-  padding: 175px 200px 0px 200px;
-  border-radius: 5px;
-}
+
 .form-control {
   border-radius: 15px;
 }
@@ -19,4 +16,19 @@ h2 {
 }
 .log {
   background-color: #fff;
+}
+.form-group {
+  width: 350px;
+}
+.login {
+  display: flex;
+  flex-wrap: wrap;
+}
+.login-side {
+  flex: 1 1 200px;
+  height: 50px;
+}
+.login-child {
+  display: flex;
+  justify-content: center;
 }

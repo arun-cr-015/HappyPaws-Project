@@ -1,17 +1,15 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" style="padding-top: 70px; padding-bottom: 93px">
+<div class="container-fluid product-outer">
   <div class="row" style="margin-left: 15px">
     <div class="col-sm-3 product" *ngFor="let temp of products">
       <div class="product-tumb">
-        <img [src]="temp.imageUrl" alt="" />
+        <img class="img-fluid" [src]="temp.imageUrl" alt="" />
       </div>
       <div class="product-details">
-        <div class="row">
-          <div class="col">
-            <h4>
-              <a>{{ temp.productName }}</a>
-            </h4>
-          </div>
+        <div class="row" style="padding-left: 15px">
+          <h4>
+            <a (click)="showDetails(temp.productid)">{{ temp.productName }}</a>
+          </h4>
         </div>
         <div class="product-bottom-details">
           <div class="product-price">PRICE :&#x20B9;{{ temp.price }}</div>
@@ -20,7 +18,7 @@
               style="max-height: 20px; color: #ff1493"
               viewBox="0 0 24 24"
               aria-hidden="true"
-              class="tweet-bottom-icon"
+              class="like"
               fill="currentColor"
               *ngIf="temp.wishlist === false"
               (click)="wishToggle(temp.productid, temp)"
@@ -35,7 +33,7 @@
               style="max-height: 20px"
               viewBox="0 0 24 24"
               aria-hidden="true"
-              class="tweet-bottom-icon liked"
+              class="liked"
               fill="currentColor"
               *ngIf="temp.wishlist === true"
               (click)="show(temp.productid, temp)"
@@ -54,7 +52,7 @@
           type="button"
           class="btn btn-primary"
           (click)="toCart(temp.productid)"
-          style="margin-right: 10px; margin-top: 10px; margin-bottom: 10px"
+          style=""
         >
           Add to Cart
         </button>
@@ -64,7 +62,7 @@
           (click)="showDetails(temp.productid)"
           data-toggle="modal"
           data-target="myModal"
-          style="margin-top: 10px; margin-bottom: 10px"
+          style=""
         >
           Quick View
         </button>

@@ -2,10 +2,6 @@
   font-family: Simonetta;
 }
 
-.checked {
-  color: orange;
-}
-
 .tab-content {
   overflow: hidden;
   display: flex;
@@ -64,21 +60,6 @@ a {
   max-width: 5px;
 }
 
-.add-to-cart,
-.like {
-  background: #ff9f1a;
-
-  border: none;
-  text-transform: capitalize;
-  font-weight: bold;
-  color: #fff;
-}
-.add-to-cart:hover,
-.like:hover {
-  background: #b36800;
-  color: #fff;
-}
-
 .tooltip-inner {
   padding: 1.3em;
 }
@@ -91,15 +72,6 @@ a {
   font-size: 14px;
 }
 
-.green-tab {
-  background-color: #4caf50;
-  color: #fff;
-  border-radius: 5px;
-  padding: 5px 3px 5px 3px;
-}
-.btn {
-  border-radius: 20px;
-}
 .btn-red {
   background-color: #e64a19;
   color: #fff;
@@ -112,34 +84,10 @@ a {
   background-color: #bf360c;
 }
 
-.btn-red:focus {
-  -moz-box-shadow: none !important;
-  -webkit-box-shadow: none !important;
-  box-shadow: none !important;
-  outline-width: 0;
-}
-
-.round-icon {
-  font-size: 40px;
-  padding-bottom: 10px;
-}
-
-.green-dot {
-  color: #4caf50;
-}
-
 p,
 span {
   font-family: "Simonetta";
   align-items: center;
-}
-
-.grey-text {
-  color: #bdbdbd;
-}
-
-.green-text {
-  color: #4caf50;
 }
 
 .btn {
@@ -147,23 +95,11 @@ span {
   border-color: #000;
   color: white;
   width: 25%;
-  font-size: 0.9rem;
-  padding: 5px;
+  font-size: 1rem;
+  padding: 10px;
   border-radius: 0;
 }
 
-.profile-pic img {
-  border-radius: 50%;
-}
-
-.rating-dot {
-  letter-spacing: 5px;
-}
-
-.via {
-  border-radius: 20px;
-  height: 28px;
-}
 .liked {
   color: #eb1599;
 }

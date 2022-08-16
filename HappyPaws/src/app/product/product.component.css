@@ -1,12 +1,15 @@
 * {
   font-family: "Simonetta";
 }
+.product-outer {
+  padding-top: 70px;
+  padding-bottom: 93px;
+}
 .product {
   max-width: 250px;
   box-shadow: 0 2px 7px #dfdfdf;
   background: #fff;
   margin: 20px;
-
   padding-top: 10px;
 }
 
@@ -36,6 +39,7 @@
   color: #363636;
   text-decoration: none;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .product-details h4 a:hover {
@@ -101,20 +105,9 @@
   font-size: 0.9rem;
   padding: 5px;
   border-radius: 0;
+  margin: 5px 5px 10px 0px;
 }
 
-.btn:focus {
-  box-shadow: none;
-  outline: none;
-  box-shadow: none;
-  color: white;
-  -webkit-box-shadow: none;
-  transition: none;
-}
-
-.btn:hover {
-  color: white;
-}
 .like {
   display: flex;
   justify-content: flex-end;
@@ -122,27 +115,7 @@
 .like.active {
   color: #eb1599;
 }
-.like.active .tweet-bottom-icon {
-  border-radius: 60px;
-  padding: 0.5em 0.6em;
-  background-color: rgba(235, 18, 170, 0.1);
-}
-.like.active .tweet-bottom-icon-sm {
-  border-radius: 60px;
-  padding: 0.25em 0.3em;
-  background-color: rgba(235, 18, 170, 0.1);
-}
 
 .liked {
   color: #eb1599;
-}
-.liked .tweet-bottom-icon {
-  border-radius: 60px;
-  padding: 0.5em 0.6em;
-  background-color: rgba(235, 18, 170, 0.1);
-}
-.liked .tweet-bottom-icon-sm {
-  border-radius: 60px;
-  padding: 0.25em 0.3em;
-  background-color: rgba(235, 18, 170, 0.1);
 }
