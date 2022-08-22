@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @Entity
 public class Product implements Serializable {
 
@@ -27,7 +25,7 @@ public class Product implements Serializable {
 	private boolean wishlist;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "category", referencedColumnName = "categoryId")
-	// @JsonIgnoreProperties(value = { "applications", "hibernateLazyInitializer" })
+
 	private ProductCategory productCategory;
 
 	public Product() {

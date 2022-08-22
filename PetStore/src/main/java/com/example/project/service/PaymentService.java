@@ -26,7 +26,7 @@ public class PaymentService {
 			RazorpayClient razorpay = new RazorpayClient("rzp_test_vJKtyvgehORRYu", "SM1WBsekQBPBDajCXtmi0qK4");
 
 			JSONObject orderRequest = new JSONObject();
-			orderRequest.put("amount", cart.getTotal() * 100);
+			orderRequest.put("amount", cart.getTotal() * 100); 
 			orderRequest.put("currency", "INR");
 			orderRequest.put("receipt", "order_rcptid_11");
 
@@ -34,11 +34,11 @@ public class PaymentService {
 			orderId = orderlocal.get("id");
 			PaymentDto pay = new PaymentDto();
 			pay.setPaymentId(orderId);
-			logger.info("RazorPay Order Id: {}", orderId);
+			logger.info("Payment Done RazorPay Order Id: {}",orderId);
 			return pay;
 
 		} catch (RazorpayException e) {
-
+			
 			logger.info(e.getMessage());
 			return null;
 		}

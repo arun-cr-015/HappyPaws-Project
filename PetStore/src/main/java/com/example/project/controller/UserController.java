@@ -2,6 +2,7 @@ package com.example.project.controller;
 
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.project.dto.UserDto;
 import com.example.project.model.UserModel;
 import com.example.project.service.UserService;
 
@@ -32,9 +34,10 @@ public class UserController {
 	}
 
 	@PostMapping("/edituser/{id}")
-	public ResponseEntity<Object> editUser(@RequestBody UserModel user, @PathVariable(value = "id") Long id) {
-		UserModel userLocal=user;
-		return userService.editUser(userLocal, id);
+	public ResponseEntity<Object> editUser(@RequestBody UserDto userDto, @PathVariable(value = "id") Long id) {
+		UserModel user = new UserModel();
+		BeanUtils.copyProperties(userDto, user);
+		return userService.editUser(user, id);
 	}
 
 	@GetMapping("/deleteuser/{id}")
